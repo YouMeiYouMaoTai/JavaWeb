@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue快速入门</title>
+
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="messege">
+        {{messege}}
+
+        <input type="button" value="点我一下" v-on:click="handle">
+        <hr>
+
+        年龄<input type="text" v-model="age">经判定为:
+        <span v-if="age <= 35">年轻人</span>
+        <span v-else-if="age <= 60 ">中年人</span>
+        <span v-else>老年人</span>
+        <hr>
+
+        年龄<input type="text" v-model="age">经判定为:
+        <span v-show="age <= 35">年轻人</span>
+        <hr>
+
+        地址<input type="text" v-model="addr">经判定为:
+        <span v-for="(index, item) in addr">{{item}}:{{index}} </span>
+        <hr>
+
+        
+
+    </div>
+</body>
+<script>
+    // 定义一个Vue对象
+    new Vue({
+        el:"#app",  // Vue接管的区域
+        data: {
+            messege: "Hello Vue",
+            age: 20,
+            addr: ["北京", "上海", "广州"]
+        },
+        methods: {
+            handle:function(){
+                alert("我被点击了")
+            }
+        }
+    })
+
+</script>
+
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-引入方式</title>
+
+    <!-- 内部脚本
+    <script>
+        alert("Hello JS!");
+    </script> 
+    -->
+
+    <!-- 外部脚本 -->
+    <!-- <script src="./js/demo.js"></script> -->
+    
+</head>
+<body>
+    
+</body>
+<script>
+    /* 输出信息 */
+    // 弹出警告框
+    window.alert("Hello JS!---alert");
+
+    // 输出到html页面中
+    document.write("Hello js!---write");
+
+    // 输出到控制台中
+    console.log("Hello js!---console");
+
+    /* 数据类型 */
+    // number、string、boolean、undefined、null(object)
+    var a = 10; // 全局变量
+    let b = 10; // 局部变量，代码块内有效
+    const c = 10; // 常量，不可修改
+
+    /* 运算符 */
+    // 算术运算符 + - * / %
+    // 赋值运算符 = += -= *= /= %=
+    // 逻辑运算符 && || ! == ===
+    // 条件运算符? :
+    // 位运算符 & | ^ ~ << >> >>>
+    // 关系运算符 < > <= >= instanceof
+    // 其他运算符 typeof void delete
+
+    /* 函数，弱类型语言，形参不需要定义类型，返回值也不需要定义 */
+    // 定义方式1
+    function add(a, b){
+        return a + b;
+    }
+    alert(add(10, 20));
+    // 定义方式2
+    var add = function(a, b){
+        return a + b;
+    }
+    alert(add(10, 20));
+    
+    /* 对象 */
+    // Array，长度可变，元素类型可变
+    var arr = new Array(1, 2, 3);
+    var arr = [1, 2, 3];
+    arr[10] = "Array[10]";
+    alert(arr[10]); // 3-9就是undefined
+
+    // forEach方法，遍历数组
+    // length属性，获取数组长度
+    // splice方法，删除或插入元素
+    // push方法，向数组末尾添加元素
+    // pop方法，删除数组末尾元素
+    // shift方法，删除数组第一个元素
+    // unshift方法，向数组开头添加元素
+    // sort方法，排序数组元素
+    // reverse方法，反转数组元素
+    // join方法，将数组元素转换为字符串
+    // map方法，遍历数组，返回新数组
+    // filter方法，过滤数组元素，返回新数组
+
+    /* 自定义对象 */
+    var user = {
+        name: "Tom",
+        age: 18,
+        gender: "Male",
+        sayHello: function(){
+            alert("Hello, I am " + this.name + "!");
+        },
+        eat(){
+            alert("吃饭！");
+        }
+    }
+    alert(user.name);
+    user.sayHello();
+    user.eat();
+
+    /* BOM */
+    // window对象
+    // 方法
+    // alert()       弹出警告框
+    // confirm()     弹出确认框
+    // setInterval() 定时执行函数
+    // setTimeout()  延迟执行函数
+
+    // location对象，地址栏对象
+    alert(location.href); // 获取当前页面地址
+    location.href = "http://www.baidu.com"; // 跳转到指定页面
+
+
+    // history对象，浏览器的历史记录
+    // navigator对象，浏览器的信息
+
+    /* DOM */
+    
+
+</script>
+</html>
