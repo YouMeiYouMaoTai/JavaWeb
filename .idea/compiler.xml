@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="maven-project01" />
         <module name="springboot-web-01" />
+        <module name="springboot-postman" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot-postman" options="-parameters" />
       <module name="springboot-web-01" options="-parameters" />
     </option>
   </component>
